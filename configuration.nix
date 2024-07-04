@@ -70,6 +70,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    ripgrep
     tmux
     vim 
     wget
