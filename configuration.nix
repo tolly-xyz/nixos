@@ -78,8 +78,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    fzf
     gcc
     gnutar
+    neovim
     nodejs_22
     python3
     ripgrep
