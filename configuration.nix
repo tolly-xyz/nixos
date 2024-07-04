@@ -74,7 +74,7 @@
     tmux
     vim 
     wget
-    zig_0_12
+    zig
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
