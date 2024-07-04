@@ -69,11 +69,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
+    alacritty
     tmux
     vim 
     wget
-  # ];
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -82,6 +82,19 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+    config = {
+      credential.helper = "libsecret";
+      init.defaultBranch = "main";
+      user = {
+        name = "tolly";
+        email = "40471358+orrefailaT@users.noreply.github.com";
+      };
+    };
+  };
 
   # List services that you want to enable:
 
