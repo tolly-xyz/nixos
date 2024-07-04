@@ -83,6 +83,7 @@
     gnumake
     gnutar
     neovim
+    nerdfonts
     nodejs_22
     python3
     ripgrep
