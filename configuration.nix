@@ -89,6 +89,7 @@
     config = {
       credential.helper = "libsecret";
       init.defaultBranch = "main";
+      push.autoSetupRemote = true;
       user = {
         name = "tolly";
         email = "40471358+orrefailaT@users.noreply.github.com";
