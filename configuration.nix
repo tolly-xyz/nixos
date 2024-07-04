@@ -75,27 +75,37 @@
     ];
   };
 
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+    users = {
+      "tolly" = import ./home.nix;
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alacritty
-    fzf
-    gcc
-    gnumake
-    gnutar
-    neovim
-    nerdfonts
-    nodejs_22
-    python3
-    ripgrep
-    rustup
-    tmux
-    unzip
-    vim
-    wget
-    zig
-    zip
-  ];
+  environment. systemPackages = with pkgs;
+    [
+      alacritty
+      fzf
+      gcc
+      gnumake
+      gnutar
+      neovim
+      nerdfonts
+      nodejs_22
+      python3
+      ripgrep
+      rustup
+      tmux
+      unzip
+      vim
+      wget
+      zig
+      zip
+    ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
