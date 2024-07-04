@@ -77,13 +77,18 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    gcc
+    gnutar
     nodejs_22
     python3
     ripgrep
+    rustup
     tmux
+    unzip
     vim 
     wget
     zig
+    zip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
