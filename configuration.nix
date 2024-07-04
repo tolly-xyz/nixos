@@ -70,6 +70,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    nodejs_22
+    python3
     ripgrep
     tmux
     vim 
