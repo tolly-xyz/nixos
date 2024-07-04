@@ -80,6 +80,7 @@
     alacritty
     fzf
     gcc
+    gnumake
     gnutar
     neovim
     nodejs_22
