@@ -92,6 +92,7 @@
       discord
       fzf
       gcc
+      dconf-editor
       gnumake
       gnutar
       neovim
@@ -114,6 +115,19 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+  };
+
+  programs.dconf = {
+    enable = true;
+    # profiles = {
+    #   user = {
+    #     databases = [
+    #       {
+    #         keyfiles = [ /home/tolly/.config/dconf/user.d ];
+    #       }
+    #     ];
+    #   };
+    # };
   };
 
   programs.git = {
