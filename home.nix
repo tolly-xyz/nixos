@@ -66,9 +66,16 @@
   # or
   #
   #  /etc/profiles/per-user/tolly/etc/profile.d/hm-session-vars.sh
-  #
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  home.shellAliases = {
+    dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
   };
 
   # Let Home Manager install and manage itself.

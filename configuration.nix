@@ -95,6 +95,7 @@
       dconf-editor
       gnumake
       gnutar
+      libnotify
       neovim
       nerdfonts
       nodejs_22
