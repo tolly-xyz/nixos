@@ -66,6 +66,7 @@
   # or
   #
   #  /etc/profiles/per-user/tolly/etc/profile.d/hm-session-vars.sh
+
   home.sessionPath = [
     "$HOME/.local/bin"
   ];
@@ -77,6 +78,8 @@
   home.shellAliases = {
     dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
   };
+
+  programs.bash.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

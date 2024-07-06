@@ -80,7 +80,7 @@
       inherit inputs;
     };
     users = {
-      "tolly" = import ./home.nix;
+      tolly = import ./home.nix;
     };
   };
 
