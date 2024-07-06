@@ -148,6 +148,7 @@
       unzip
       vim
       wget
+      yarn
       zig
       zip
     ];
