@@ -134,6 +134,7 @@
       gnumake
       gnutar
       htop
+      krita
       libnotify
       mangohud
       neovim
