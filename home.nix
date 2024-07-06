@@ -92,6 +92,17 @@
 
   programs.bat = {
     enable = true;
+    themes = {
+      tokyonight = {
+        src = pkgs.fetchFromGitHub {
+          owner = "folke";
+          repo = "tokyonight.nvim";
+          rev = "v4.3.0";
+          hash = "sha256-JOEUPm5W8Yz6kwE+EA6RkV/52GpCkKF0bf9IgeoeX6w=";
+        };
+        file = "extras/sublime/tokyonight_night.tmTheme";
+      };
+    };
   };
 
   # Let Home Manager install and manage itself.
