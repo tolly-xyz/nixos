@@ -36,18 +36,54 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # nvidia things
+  # thanks Vimjoyer https://www.youtube.com/watch?v=qlfm3MEbqYA
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
 
+  hardware.nvidia = {
+    prime = {
+      # nix shell nixpkgs#pciutils -c lspci | grep ' VGA '
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+      # use `nvidia-offload` to use GPU for command
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+    };
+    modesetting.enable = true;
+  };
 
+  specialisation = {
+    gpu-sync.configuration = {
+      hardware.nvidia = {
+        prime.sync.enable = lib.mkForce true;
+        prime.offload = {
+          enable = lib.mkForce false;
+          enableOffloadCmd = lib.mkForce false;
+        };
+      };
+    };
+  };
 
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  services.xserver = {
+    # Enable the X11 windowing system.
+    enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+
+    videoDrivers = [ "nvidia" ];
+
+    # Configure keymap in X11
+    xkb.layout = "us";
+    # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  };
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -86,19 +122,24 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment. systemPackages = with pkgs;
+  environment.systemPackages = with pkgs;
     [
       alacritty
+      btop
       discord
       fzf
       gcc
       dconf-editor
+      flameshot
       gnumake
       gnutar
+      htop
       libnotify
+      mangohud
       neovim
       nerdfonts
       nodejs_22
+      protonup
       python3
       ripgrep
       rustup
@@ -144,6 +185,13 @@
       };
     };
   };
+
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+
+  programs.gamemode.enable = true;
 
   programs.nix-ld.enable = true;
 
