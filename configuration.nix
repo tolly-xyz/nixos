@@ -38,9 +38,9 @@
 
   # nvidia things
   # thanks Vimjoyer https://www.youtube.com/watch?v=qlfm3MEbqYA
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   hardware.nvidia = {
@@ -107,6 +107,8 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      android-tools
+      cargo-tauri
       firefox
     ];
   };
