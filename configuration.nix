@@ -110,7 +110,6 @@
       android-tools
       cargo-tauri
       firefox
-      trunk
     ];
   };
 
