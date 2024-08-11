@@ -110,6 +110,7 @@
       android-tools
       cargo-tauri
       firefox
+      google-chrome
     ];
   };
 
