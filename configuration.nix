@@ -150,6 +150,7 @@
       tmux
       unzip
       vim
+      wezterm
       wget
       yarn
       zig
