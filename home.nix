@@ -80,6 +80,15 @@
     dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
   };
 
+  dconf.settings =
+    {
+      "org/gnome/desktop/background" =
+        {
+          picture-options = "centered";
+          picture-uri-dark = "~/.background-image";
+        };
+    };
+
   programs.bash = {
     enable = true;
     historyControl = [ "erasedups" ];
