@@ -114,6 +114,7 @@
       cargo-tauri
       firefox
       google-chrome
+      prismlauncher # minecraft
     ];
   };
 
@@ -186,6 +187,8 @@
     package = pkgs.gitFull;
     config = {
       credential.helper = "libsecret";
+      diff.tool = "nvimdiff";
+      difftool.prompt = false;
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       user = {
@@ -193,6 +196,7 @@
         email = "40471358+orrefailaT@users.noreply.github.com";
       };
     };
+    prompt.enable = true;
   };
 
   programs.steam = {
