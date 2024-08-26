@@ -113,6 +113,7 @@
       android-tools
       cargo-tauri
       firefox
+      gh
       google-chrome
       prismlauncher # minecraft
     ];
