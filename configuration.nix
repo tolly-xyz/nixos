@@ -112,6 +112,7 @@
     packages = with pkgs; [
       android-tools
       cargo-tauri
+      fastfetch
       firefox
       gh
       google-chrome
