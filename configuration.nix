@@ -116,6 +116,7 @@
       firefox
       gh
       google-chrome
+      obs-studio
       prismlauncher # minecraft
     ];
   };
