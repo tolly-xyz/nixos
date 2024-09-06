@@ -119,6 +119,7 @@
       google-chrome
       obs-studio
       prismlauncher # minecraft
+      yt-dlp
     ];
   };
 
