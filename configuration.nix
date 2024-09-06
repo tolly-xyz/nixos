@@ -113,6 +113,7 @@
       android-tools
       cargo-tauri
       fastfetch
+      ffmpeg
       firefox
       gh
       google-chrome
