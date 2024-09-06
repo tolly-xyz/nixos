@@ -111,6 +111,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       android-tools
+      avidemux
       cargo-tauri
       fastfetch
       firefox
