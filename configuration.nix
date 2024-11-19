@@ -138,6 +138,7 @@
     [
       alacritty
       btop
+      bun
       discord
       fzf
       gcc
