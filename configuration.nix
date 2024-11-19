@@ -56,6 +56,7 @@
       };
     };
     modesetting.enable = true;
+    open = false;
   };
 
   specialisation = {
