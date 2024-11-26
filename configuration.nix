@@ -155,6 +155,7 @@
       nerdfonts
       nodejs_22
       protonup
+      protonvpn-gui
       python3
       ripgrep
       rustup
