@@ -145,6 +145,7 @@
       gcc
       dconf-editor
       flameshot
+      ghc
       gnumake
       gnutar
       htop
