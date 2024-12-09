@@ -148,10 +148,10 @@
       ghc
       gnumake
       gnutar
-      haskellPackages.haskell-language-server
       htop
       krita
       libnotify
+      lmstudio
       mangohud
       neovim
       nerdfonts
