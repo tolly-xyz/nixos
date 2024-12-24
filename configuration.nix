@@ -146,6 +146,7 @@
       dconf-editor
       flameshot
       ghc
+      ghostscript
       gnumake
       gnutar
       htop
