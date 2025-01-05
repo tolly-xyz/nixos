@@ -147,6 +147,7 @@
       flameshot
       ghc
       ghostscript
+      ghostty
       gnumake
       gnutar
       htop
@@ -155,7 +156,7 @@
       lmstudio
       mangohud
       neovim
-      nerdfonts
+      nerd-fonts.hack
       nodejs_22
       protonup
       protonvpn-gui
