@@ -163,7 +163,7 @@
       python3
       ripgrep
       rustup
-      texliveBasic
+      texliveFull
       tmux
       unzip
       vim
