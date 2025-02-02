@@ -115,11 +115,15 @@
     packages = with pkgs; [
       android-tools
       cargo-tauri
+      discord
       fastfetch
       ffmpeg
       firefox
       gh
       google-chrome
+      krita
+      libreoffice
+      lmstudio
       obs-studio
       prismlauncher # minecraft
       yt-dlp
@@ -139,10 +143,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs;
     [
-      alacritty
       btop
       bun
-      discord
       fzf
       gcc
       dconf-editor
@@ -153,9 +155,7 @@
       gnumake
       gnutar
       htop
-      krita
       libnotify
-      lmstudio
       mangohud
       neovim
       nerd-fonts.hack
@@ -169,7 +169,6 @@
       tmux
       unzip
       vim
-      wezterm
       wget
       yarn
       zig
