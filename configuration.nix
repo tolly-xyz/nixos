@@ -121,6 +121,7 @@
       firefox
       gh
       google-chrome
+      jdk17
       krita
       libreoffice
       lmstudio
