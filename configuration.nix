@@ -114,6 +114,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       android-tools
+      brave
       cargo-tauri
       discord
       fastfetch
